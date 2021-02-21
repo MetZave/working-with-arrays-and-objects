@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +54,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const totalPopulation = ({utah, california, texas, arizona}) => {
+    let totalNumber = utah + california + texas + arizona
+    return totalNumber
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +71,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const ingredients = ({carb, fat , protein}) => {
+  let arr = [carb, fat, protein]
+  return arr
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +92,17 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const largeNumbers = ({first, second, third}) => {
+  let smallestValue
+  if(first < second && first < third) {
+    smallestValue = first
+  } else if(second < third) {
+    smallestValue = second
+  } else {
+    smallestValue = third
+  }
+  return smallestValue
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +114,15 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const numberGroups = ({a, b, c}) => {
+  let largestArray
+  if(a.length > b.length && a.length > c.length) {
+    largestArray = a
+  } else if(b.length > c.length) {
+    largestArray = b
+  } else {
+    largestArray = c
+  }
+  return largestArray
+}
 

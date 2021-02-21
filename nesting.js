@@ -51,8 +51,13 @@ var employees = [
 */
 
 //Code Here
-
-
+const employeeUpdater = () => {
+  employees.forEach(({ firstName: name }, index) => {
+    if (name === `Theo`) delete employees[index]
+    if (name === 'Lorie') employees[index].department = 'HR'
+  })
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -70,6 +75,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+const removeDuplicates = () =>  [...new Set(workplaceAccidents)]
 
 
 ////////// PROBLEM 3 //////////
@@ -100,7 +106,8 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
-
+grumpyActivity = cat.catFriends[0].activities[1]
+fluffy2ndFriend = cat.catFriends[1].name
 
 ////////// PROBLEM 4 //////////
 
@@ -139,7 +146,7 @@ var myCar = {
 */
 
 //Code Here
-
+const recordCleaner = () => myCar.accidents.forEach( e => e.atFaultForAccident === true ? e.atFaultForAccident = false : e.atFaultForAccident = false)
 
 
 ////////// PROBLEM 5 //////////
@@ -159,4 +166,21 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
+const looper = () => {
+  const isEven = num => num % 2 === 0
+  let tempArray = []
+  let modArray = []
+
+  numsArr.forEach(e => {
+    for(i = 0; i < e.length; i++) {
+      if(isEven(e[i]) === true){
+        tempArray.push("even")
+      } else {
+        tempArray.push("odd")
+      }
+    }
+    modArray.push(tempArray)
+  })
+  return modArray
+} 
 
